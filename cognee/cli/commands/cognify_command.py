@@ -66,6 +66,7 @@ After successful cognify processing, use `cognee search` to query the knowledge 
             "--chunks-per-batch",
             type=int,
             help="Number of chunks to process per task batch (try 50 for large single documents).",
+        parser.add_argument("--no-cache", action="store_true", help="Skip cache and reprocess")
         )
 
     def execute(self, args: argparse.Namespace) -> None:

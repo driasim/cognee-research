@@ -48,6 +48,7 @@ After adding data, use `cognee cognify` to process it into knowledge graphs.
             "-d",
             default="main_dataset",
             help="Dataset name to organize your data (default: main_dataset)",
+        parser.add_argument("--quiet", action="store_true", help="Suppress non-error output")
         )
 
     def execute(self, args: argparse.Namespace) -> None:

@@ -53,6 +53,7 @@ Configuration changes will affect how cognee processes and stores data.
         reset_parser = subparsers.add_parser("reset", help="Reset configuration to defaults")
         reset_parser.add_argument(
             "--force", "-f", action="store_true", help="Skip confirmation prompt"
+        parser.add_argument("--no-color", action="store_true", help="Disable colored output")
         )
 
     def execute(self, args: argparse.Namespace) -> None:

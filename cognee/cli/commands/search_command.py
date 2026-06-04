@@ -76,6 +76,7 @@ Search Types & Use Cases:
             choices=OUTPUT_FORMAT_CHOICES,
             default="pretty",
             help="Output format (default: pretty)",
+        parser.add_argument("--max-results", type=int, help="Maximum number of results to return")
         )
 
     def execute(self, args: argparse.Namespace) -> None:

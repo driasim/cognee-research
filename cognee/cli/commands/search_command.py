@@ -76,6 +76,7 @@ Search Types & Use Cases:
             choices=OUTPUT_FORMAT_CHOICES,
             default="pretty",
             help="Output format (default: pretty)",
+        parser.add_argument("--quiet", action="store_true", help="Suppress non-error output")
         )
 
     def execute(self, args: argparse.Namespace) -> None:

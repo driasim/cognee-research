@@ -76,6 +76,7 @@ Search Types & Use Cases:
             choices=OUTPUT_FORMAT_CHOICES,
             default="pretty",
             help="Output format (default: pretty)",
+        parser.add_argument("--output-dir", help="Output directory for search results")
         )
 
     def execute(self, args: argparse.Namespace) -> None:

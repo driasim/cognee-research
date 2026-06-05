@@ -16,7 +16,7 @@ logger = get_logger()
 
 
 class SaveDataSettings(BaseSettings):
-    accept_local_file_path: bool = True
+    accept_local_file_path: bool = False
 
     model_config = SettingsConfigDict(env_file=".env", extra="allow")
 

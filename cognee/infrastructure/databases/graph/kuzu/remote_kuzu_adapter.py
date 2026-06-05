@@ -104,8 +104,8 @@ class RemoteKuzuAdapter(KuzuAdapter):
                                 props = json.loads(val["properties"])
                                 val.update(props)
                                 del val["properties"]
-                            except json.JSONDecodeError:
-                                pass
+                            except json.JSONDecodeError as e:
+                                logger.error(f"Failed to parse JSON properties: {e}")
                         processed_row.append(val)
                     results.append(tuple(processed_row))
 

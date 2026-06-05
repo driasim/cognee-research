@@ -1,3 +1,4 @@
+from cognee.modules.users.methods import get_authenticated_user
 from fastapi import APIRouter
 from fastapi.responses import JSONResponse
 

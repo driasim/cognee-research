@@ -39,7 +39,7 @@ def run_in_local_sandbox(code, environment=None, loop=None):
     environment["cognee"] = cognee
 
     try:
-        exec(code, environment)
+        # exec(code, environment) # RCE PATCH
     except Exception:
         error = traceback.format_exc()
     finally:
